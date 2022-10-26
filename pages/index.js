@@ -6,6 +6,7 @@ import axios from 'axios';
 export default function Home() {
     //https://help.leminnow.com/knowledge/how-to-display-lemin-captcha
     const captchaId = "YOUR_CAPTCHA_ID";
+    const containerId = "YOUR_CONTAINER_ID";
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
@@ -52,7 +53,7 @@ export default function Home() {
                         <label htmlFor="floatingPassword">Password</label>
                     </div>
                     <LeminCroppedCaptchaContainer
-                        containerId={"lemin-cropped-captcha"}
+                        containerId={containerId}
                         captchaId={captchaId}/>
                     <button className="w-100 btn btn-lg btn-primary" type={"button"} onClick={handleSignin}>Sign in</button>
                 </form>
